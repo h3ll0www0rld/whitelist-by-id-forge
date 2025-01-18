@@ -1,0 +1,31 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    name: Pack
+
+    steps:
+      - name: Check Out
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+
+      - name: Chmod
+        run: chmod +x ./gradlew
+
+      - name: Pack
+        run: ./gradlew jar
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build/lib/
