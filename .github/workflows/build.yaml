@@ -22,7 +22,7 @@ jobs:
       - name: Chmod
         run: chmod +x ./gradlew
 
-      - name: Pack
+      - name: Build
         run: ./gradlew jar
 
       - name: Upload build artifacts
