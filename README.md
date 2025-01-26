@@ -1,5 +1,5 @@
 # Whitelist By ID
-Make server whitelist work by matching player's ID.
+Make server whitelist work by matching player's ID.<br>
 Works on minecraft version 1.19.2.
 
 Code From [mcmod.cn](https://www.mcmod.cn/class/7542.html)@alltime2838
